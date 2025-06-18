@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,7 +12,7 @@
     }
 
     body {
-      background-image: url('https://i.ibb.co/Hpkg9RY8/Sin-t-tulo-1.png');
+      background-image: url('https://i.ibb.co/Hpkg9RY8/Sin-t-tulo-1.png'); /* Fondo general (PC) */
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -25,4 +25,16 @@
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     }
 
+    @media (max-width: 768px) {
+      body {
+        background-image: url('https://i.ibb.co/VpWXR7hG/2122.png'); /* Solo en móviles */
+        background-size: contain;
+        background-attachment: scroll;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Aquí tu contenido -->
+</body>
 </html>
