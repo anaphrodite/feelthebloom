@@ -11,7 +11,7 @@
       height: 100%;
     }
 
-       body {
+    body {
       background-image: url('https://i.ibb.co/Hpkg9RY8/Sin-t-tulo-1.png');
       background-size: cover;
       background-repeat: no-repeat;
@@ -25,6 +25,14 @@
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     }
 
+    /* Texto solo en PC */
+    .secreto {
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 2rem;
+    }
+
+    /* Ocultar en celular */
     @media (max-width: 768px) {
       html, body {
         height: 100vh;
@@ -33,16 +41,20 @@
       }
 
       body {
-        background-image: url('https://i.ibb.co/VpWXR7hG/2122.png'); /* Fondo especial para celular */
-        background-size: cover;             /* Rellenar toda la pantalla */
+        background-image: url('https://i.ibb.co/VpWXR7hG/2122.png');
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: scroll;
+      }
+
+      .secreto {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Aquí tu contenido -->
+  <a class="secreto" href="https://secreto.site/ay6ur7" target="_blank">SECRETO</a>
 </body>
 </html>
