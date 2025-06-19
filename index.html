@@ -5,73 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>sentir-te</title>
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
     }
 
     body {
-      background-color: black;
+      background-image: url('https://i.ibb.co/Hpkg9RY8/Sin-t-tulo-1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       font-family: Arial, sans-serif;
     }
 
-    .contenedor {
-      position: relative;
-      width: 100%;
-      max-width: 600px; /* ajusta esto al tamaño real de tu imagen si quieres */
-      margin: 0 auto;
-    }
-
-    .fondo {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .texto {
-      position: absolute;
+    /* TEXTOS SOLO PARA PC */
+    .secreto,
+    .nuevo-texto,
+    .CANCION {
       font-weight: bold;
       text-decoration: underline;
-      font-size: 2.5vw; /* escala automática */
+      font-size: 12px;
       color: #222221;
+      position: absolute;
       font-family: ui-monospace;
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
     }
 
-    /* TEXTOS EN POSICIÓN RELATIVA A LA IMAGEN */
     .secreto {
-      top: 65%;
-      left: 55%;
+      top: 393px;
+      left: 570px;
     }
 
     .nuevo-texto {
-      top: 71%;
-      left: 55%;
+      top: 412px;
+      left: 570px;
     }
 
-    .cancion {
-      top: 77%;
-      left: 55%;
+    .CANCION {
+      top: 431px;
+      left: 570px;
     }
 
-    /* OPCIONAL: más tamaño de texto en pantallas muy pequeñas */
-    @media (max-width: 400px) {
-      .texto {
-        font-size: 12px;
+    /* TEXTOS SOLO PARA MÓVIL - OCULTOS POR DEFECTO */
+    .secreto-movil,
+    .nuevo-texto-movil,
+    .cancion-movil {
+      display: none;
+    }
+
+    /* ESTILOS PARA CELULAR */
+    @media (max-width: 768px) {
+      body {
+        background-image: url('https://i.ibb.co/VpWXR7hG/2122.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      }
+
+      /* Oculta los textos de PC */
+      .secreto,
+      .nuevo-texto,
+      .CANCION {
+        display: none;
+      }
+
+      /* Muestra y posiciona los textos móviles */
+      .secreto-movil,
+      .nuevo-texto-movil,
+      .cancion-movil {
+        display: block;
+        position: absolute;
+        font-weight: bold;
+        text-decoration: underline;
+        font-family: ui-monospace;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
+        font-size: 9px;
+        color: #222221;
+      }
+
+      .secreto-movil {
+        top: 380px;
+        left: 177px;
+      }
+
+      .nuevo-texto-movil {
+        top: 392px;
+        left: 190px;
+      }
+
+      .cancion-movil {
+        top: 404px;
+        left: 180px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="contenedor">
-    <!-- Imagen como contenido, no como fondo -->
-    <img src="https://i.ibb.co/VpWXR7hG/2122.png" class="fondo" alt="fondo" />
+  <!-- TEXTOS PARA PC -->
+  <a class="secreto" href="https://secreto.site/ay6ur7" target="_blank">SECRETO.SITE</a>
+  <a class="nuevo-texto" href="https://letterboxd.com/film/masculin-feminin/" target="_blank">MASCULIN FÉMININ</a>
+  <a class="CANCION" href="https://www.youtube.com/watch?v=3sUvXZm10hY" target="_blank">SKEETER DAVIS</a>
 
-    <!-- Textos que se escalan y posicionan con la imagen -->
-    <a class="texto secreto" href="https://secreto.site/ay6ur7" target="_blank">SECRETO.SITE</a>
-    <a class="texto nuevo-texto" href="https://letterboxd.com/film/masculin-feminin/" target="_blank">MASCULIN FÉMININ</a>
-    <a class="texto cancion" href="https://www.youtube.com/watch?v=3sUvXZm10hY" target="_blank">SKEETER DAVIS</a>
-  </div>
+  <!-- TEXTOS PARA CELULAR -->
+  <a class="secreto-movil" href="https://secreto.site/ay6ur7" target="_blank">SECRETO.SITE</a>
+  <a class="nuevo-texto-movil" href="https://letterboxd.com/film/masculin-feminin/" target="_blank">MASCULIN FÉMININ</a>
+  <a class="cancion-movil" href="https://www.youtube.com/watch?v=3sUvXZm10hY" target="_blank">SKEETER DAVIS</a>
 </body>
 </html>
