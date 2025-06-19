@@ -25,7 +25,6 @@
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     }
 
-    /* PC */
     .S {
       font-weight: bold;
       text-decoration: underline;
@@ -62,14 +61,12 @@
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
     }
 
-    /* TEXTOS SOLO PARA MÓVIL - OCULTOS POR DEFECTO */
     .S-M,
     .N-M,
     .C-M {
       display: none;
     }
 
-    /* EMV */
     @media (max-width: 768px) {
       html, body {
         height: 100vh;
@@ -85,17 +82,11 @@
         background-attachment: scroll;
       }
 
-      /* OPC */
-      .S,
-      .N,
-      .C {
+      .S, .N, .C {
         display: none;
       }
 
-      /* MMV */
-      .S-M,
-      .N-M,
-      .C-M {
+      .S-M, .N-M, .C-M {
         display: block;
         position: absolute;
         font-weight: bold;
@@ -128,12 +119,27 @@
 </head>
 
 <body>
-  <!PC >
+  <!-- Audio oculto -->
+  <audio id="bg-music" autoplay hidden>
+    <source src="dolce.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Reintento automático por si el navegador bloquea el autoplay
+    window.addEventListener('click', () => {
+      const audio = document.getElementById('bg-music');
+      if (audio.paused) {
+        audio.play();
+      }
+    });
+  </script>
+
+  <!-- PC -->
   <a class="S" href="https://secreto.site/ay6ur7" target="_blank">SECRETO.SITE</a>
   <a class="N" href="https://letterboxd.com/film/masculin-feminin/" target="_blank">MASCULIN FÉMININ</a>
   <a class="C" href="https://www.youtube.com/watch?v=3sUvXZm10hY" target="_blank">SKEETER DAVIS</a>
 
-  <!MV>
+  <!-- Móvil -->
   <a class="S-M" href="https://secreto.site/ay6ur7" target="_blank">SECRETO.SITE</a>
   <a class="N-M" href="https://letterboxd.com/film/masculin-feminin/" target="_blank">MASCULIN FÉMININ</a>
   <a class="C-M" href="https://www.youtube.com/watch?v=3sUvXZm10hY" target="_blank">SKEETER DAVIS</a>
