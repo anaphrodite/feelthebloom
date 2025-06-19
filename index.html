@@ -119,13 +119,13 @@
 </head>
 
 <body>
-  <!-- Audio oculto -->
+  <!-- AO -->
   <audio id="bg-music" autoplay hidden>
     <source src="dolce.mp3" type="audio/mpeg">
   </audio>
 
   <script>
-    // Reintento automático por si el navegador bloquea el autoplay
+    // RA
     window.addEventListener('click', () => {
       const audio = document.getElementById('bg-music');
       if (audio.paused) {
