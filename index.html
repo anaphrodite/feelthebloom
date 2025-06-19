@@ -9,7 +9,6 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      width: 100%;
     }
 
     body {
@@ -26,42 +25,51 @@
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     }
 
-    /* TEXTOS SOLO PARA PC */
-    .secreto,
-    .nuevo-texto,
+    /* TEXTOS SOLO PARA PC - MODIFICADOS */
+    .secreto {
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 0.70vw;
+      color: #222221;
+      position: absolute;
+      top: 40.5%;
+      left: 42%;
+      font-family: ui-monospace;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
+    }
+
+    .nuevo-texto {
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 0.70vw;
+      color: #222221;
+      position: absolute;
+      top: 42.5%;
+      left: 42%;
+      font-family: ui-monospace;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
+    }
+
     .CANCION {
       font-weight: bold;
       text-decoration: underline;
       font-size: 0.70vw;
       color: #222221;
       position: absolute;
+      top: 44.5%;
+      left: 42%;
       font-family: ui-monospace;
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
     }
 
-    .secreto {
-      top: 40.5%;
-      left: 42%;
-    }
-
-    .nuevo-texto {
-      top: 42.5%;
-      left: 42%;
-    }
-
-    .CANCION {
-      top: 44.5%;
-      left: 42%;
-    }
-
-    /* TEXTOS SOLO PARA MÓVIL - OCULTOS POR DEFECTO EN PC */
+    /* TEXTOS SOLO PARA MÓVIL - OCULTOS POR DEFECTO */
     .secreto-movil,
     .nuevo-texto-movil,
     .cancion-movil {
       display: none;
     }
 
-    /* ESTILOS SOLO PARA CELULAR */
+    /* ESTILOS PARA CELULAR */
     @media (max-width: 768px) {
       html, body {
         height: 100vh;
@@ -70,12 +78,11 @@
       }
 
       body {
-        background-image: url('https://i.ibb.co/VpWXR7hG/2122.png'); /* Imagen móvil */
-        background-size: contain; /* ⬅ evita cortes y rellena verticalmente */
+        background-image: url('https://i.ibb.co/VpWXR7hG/2122.png');
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: scroll;
-        display: block; /* Elimina el centrado forzado que desplazaba elementos */
       }
 
       /* Oculta los textos de PC */
@@ -85,7 +92,7 @@
         display: none;
       }
 
-      /* Muestra y posiciona los textos móviles */
+      /* Muestra los textos móviles */
       .secreto-movil,
       .nuevo-texto-movil,
       .cancion-movil {
@@ -102,16 +109,19 @@
       .secreto-movil {
         top: 380px;
         left: 177px;
+        transform: translateX(-50%);
       }
 
       .nuevo-texto-movil {
         top: 392px;
         left: 190px;
+        transform: translateX(-50%);
       }
 
       .cancion-movil {
         top: 404px;
         left: 180px;
+        transform: translateX(-50%);
       }
     }
   </style>
