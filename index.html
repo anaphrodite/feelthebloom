@@ -121,18 +121,21 @@
 <body>
   <!-- AO -->
   <audio id="bg-music" autoplay hidden>
-    <source src="halah.mp3" type="audio/mpeg">
-  </audio>
+  <source src="halah.mp3" type="audio/mpeg">
+</audio>
 
-  <script>
-    // RA
-    window.addEventListener('click', () => {
-      const audio = document.getElementById('bg-music');
-      if (audio.paused) {
-        audio.play();
-      }
-    });
-  </script>
+<script>
+
+  const audio = document.getElementById('bg-music');
+  audio.volume = 0.5;
+
+  window.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+    }
+  });
+</script>
+
 
   <!-- PC -->
   <a class="S" href="https://secreto.site/ay6ur7" target="_blank">SECRETO.SITE</a>
